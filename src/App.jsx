@@ -9,10 +9,12 @@ function App() {
     return saved ? JSON.parse(saved) : [];
   });
 
-  const addTodo = (text) => {
+  const addTodo = (text, date, time) => {
     const newTodo = {
       id: Date.now(),
       text,
+      date,
+      time,
       done: false,
     };
     setTodos([...todos, newTodo]);
